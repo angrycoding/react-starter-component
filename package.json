@@ -1,0 +1,16 @@
+{
+  "name": "react-starter-component",
+  "version": "0.0.26",
+  "license": "ISC",
+  "author": "Ruslan Matveev aka Angrycoding <matveev.ruslan@gmail.com>",
+  "files": [
+    "bootstrap"
+  ],
+  "bin": "./bootstrap/build/postInstall.js",
+  "repository": "git@github.com:angrycoding/react-starter-component.git",
+  "dependencies": {
+    "delete-empty": "^3.0.0",
+    "fs-extra": "^11.3.0",
+    "recursive-readdir": "^2.2.3"
+  }
+}

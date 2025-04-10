@@ -1,0 +1,50 @@
+{
+  "name": "$$$componentName$$$",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "devDependencies": {}
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "scripts": {
+    "prepublishOnly": "yarn build",
+    "start": "react-app-rewired start",
+    "build": "yarn compile && yarn bundle && yalc publish --push --sig --private --no-scripts",
+    "compile": "rm -rf dist && cp -r src/$$$componentName$$$ dist && yarn tsc --p ./tsconfig.build.json && node ./build/preBuild.js",
+    "bundle": "yarn rollup dist/index.js --plugin @rollup/plugin-commonjs  --file dist/index.js --format es && node ./build/postBundle.js"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@types/node": "^16.18.113",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@types/uuid": "^10.0.0",
+    "css": "^3.0.0",
+    "customize-cra": "^1.0.0",
+    "delete-empty": "^3.0.0",
+    "react-app-rewired": "^2.2.1",
+    "react-scripts": "5.0.1",
+    "sass": "^1.79.5",
+    "typescript": "^4.9.5",
+    "uuid": "^11.0.3"
+  }
+}
