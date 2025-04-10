@@ -65,9 +65,8 @@ const getRandomLetterOrDigit = () => {
 
 const randomPrefix = [
 	getRandomLetter(),
-	Date.now(),
-	new Array(3).fill(0).map(getRandomLetterOrDigit),
-].join('');
+	new Array(7).fill(0).map(getRandomLetterOrDigit),
+].flat(Infinity).join('');
 
 const generateRandomClassName = (() => {
 
