@@ -1,4 +1,4 @@
-# create-react-component
+# react-starter-component
 
 
 Template for bootstrapping basic component structure with all build scripts / tsconfigs already embedded, just type:
